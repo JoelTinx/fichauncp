@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 38);
+/******/ 	return __webpack_require__(__webpack_require__.s = 43);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -48588,84 +48588,24 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(6)))
 
 /***/ }),
-/* 38 */
+/* 38 */,
+/* 39 */,
+/* 40 */,
+/* 41 */,
+/* 42 */,
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(39);
-module.exports = __webpack_require__(40);
+module.exports = __webpack_require__(44);
 
 
 /***/ }),
-/* 39 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
-
-
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
 
 __webpack_require__(12);
-
 window.Vue = __webpack_require__(34);
-
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
-
-// Vue.component('example-component', require('./components/ExampleComponent.vue'));
-
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key)))
-
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-
-var app = new Vue({
-    el: "#app",
-    created: function created() {
-        this.Saluda();
-    },
-    data: function data() {
-        return {
-            mensaje: '',
-            ficha: {}
-        };
-    },
-    methods: {
-        PostFicha: function PostFicha() {
-            console.log(this.ficha);
-            axios.post('/api/ficha', this.ficha).then(function (res) {
-                if (!res.data.error) {
-                    alert('Se ha insertado correctamente');
-                } else {
-                    alert(res.data.mensaje);
-                }
-            }).catch(function (err) {
-                console.log(err);
-                alert('Ha ocurrido un error');
-            });
-        },
-        Saluda: function Saluda() {
-            console.log('Saludo desde Vue');
-        }
-    },
-    computed: {}
-});
-
-/***/ }),
-/* 40 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
+var axios = __webpack_require__(11);
 
 /***/ })
 /******/ ]);
